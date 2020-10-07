@@ -2,6 +2,7 @@ import React from "react";
 
 import { Dimensions } from "react-native";
 import styled from "styled-components/native";
+import { Description } from "../../components/Description";
 
 import { useStateContext } from "../../utils";
 
@@ -37,7 +38,7 @@ export const CountryData = () => {
       </Column>
       <Column>
         <DescriptionText>{country?.name}</DescriptionText>
-        <DescriptionText>Native Name: {country?.name}</DescriptionText>
+        <Description title="Native Name" data={country.name} />
         <DescriptionText>Population: {country?.population}</DescriptionText>
         <DescriptionText>Region: {country?.region}</DescriptionText>
         <DescriptionText>Sub Region: {country?.subregion}</DescriptionText>
