@@ -9,7 +9,11 @@ const Container = styled.View`
   justify-content: space-between;
   background: ${({ colors }: any) => colors.background.alt};
   flex-direction: row;
-  padding: 1rem 2rem;
+  padding: 1rem 5rem;
+
+  ${breakpoints.sm`
+    padding: 1rem 2rem;
+  `}
 `;
 
 const Title = styled.Text`
