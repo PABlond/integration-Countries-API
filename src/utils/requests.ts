@@ -8,7 +8,7 @@ const getAll = async (): Promise<Country[]> => {
     `${constants.apiUrl}/all${constants.homePageCountriesFields}`
   );
 
-  return data;
+  return data.slice(0, 30);
 };
 
 const getByRegion = async (region: string): Promise<Country[]> => {
@@ -26,7 +26,7 @@ const getPartial = async (partialName: string): Promise<Country[]> => {
   const { data } = await axios.get(
     `${constants.apiUrl}/name/${partialName}${constants.homePageCountriesFields}`
   );
-  return data;
+  return data.slice(0, 30);
 };
 
 const getExact = async (countryName: string): Promise<any> => {
