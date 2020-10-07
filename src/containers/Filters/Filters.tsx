@@ -10,10 +10,11 @@ const Container = styled.View`
   justify-content: space-between;
   background: ${({ colors }: any) => colors.background.main};
   flex-direction: row;
-  padding: 1rem 2rem;
+  padding: 1rem 5rem;
 
   ${breakpoints.sm`
-    display: block
+    display: block;
+    padding: 1rem 2rem;
   `}
 `;
 
